@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LightningDemo — WoW Forever Concept</title>
+<style>
+  :root {
+    --void: #0c0a12;
+    --gold: #c9a227;
+    --soul: #8b6bb8;
+    --parchment: #efe8f4;
+    --storm: #1a1528;
+    --bolt: #e8f4ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--void);
+    color: var(--parchment);
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse at 50% 0%, rgba(139,107,184,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(201,162,39,0.08) 0%, transparent 40%);
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .tag {
+    letter-spacing: 0.35em;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    color: var(--parchment);
+    text-shadow: 0 0 40px rgba(139,107,184,0.4);
+  }
+  h1 span { color: var(--gold); }
+  .sub {
+    margin-top: 10px;
+    color: #b8aec8;
+    font-size: 16px;
+  }
+  .video-box {
+    background: #000;
+    border: 1px solid rgba(201,162,39,0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(139,107,184,0.15), 0 20px 40px rgba(0,0,0,0.5);
+    margin: 36px 0;
+  }
+  video {
+    width: 100%;
+    display: block;
+    background: #000;
+  }
+  .card {
+    background: rgba(26,21,40,0.7);
+    border: 1px solid rgba(139,107,184,0.2);
+    border-radius: 6px;
+    padding: 28px 32px;
+    line-height: 1.7;
+    font-size: 16.5px;
+  }
+  .card h2 {
+    color: var(--gold);
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+  .card p { margin-bottom: 14px; }
+  .card p:last-child { margin-bottom: 0; }
+  .note {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 13px;
+    color: #8a7e9c;
+  }
+  .note strong { color: var(--gold); font-weight: normal; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="tag">World of Warcraft Forever</div>
+    <h1>Lightning <span>Demo</span></h1>
+    <div class="sub">A concept demonstration for procedural multi-termination lightning</div>
+  </header>
+
+  <div class="video-box">
+    <video controls playsinline poster="">
+      <source src="Lightning.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="card">
+    <h2>The Goal</h2>
+    <p>
+      Lightning in World of Warcraft Forever should feel like a real storm: a single flash that can strike the ground in multiple places, with jagged branching paths that taper as they descend, and a return-stroke illusion that makes the bolt appear to travel downward even though the visible flash propagates upward.
+    </p>
+    <p>
+      This demonstration explores a procedural approach. A random number of ground terminations (typically 5–12) are generated and connected through layered, irregular paths to a high sky node. Distance from the viewer scales the apparent size, thickness, and node spacing so distant strikes sit higher toward the horizon while close ones dominate the frame. Thunder delay follows real-world sound travel (roughly 375 yards per second), and volume falls off with range.
+    </p>
+    <p>
+      The 2D demo validates the visual language and the underlying math. The intended 3D implementation places those same nodes and arcs in world space, projected through the camera, with engine-side line rendering, glow, and audio spatialization.
+    </p>
+  </div>
+
+  <div class="note">
+    Concept demo for <strong>WoW Forever</strong> · Interface target 16001 · Tested on Classic Era 11509
+  </div>
+</div>
+</body>
+</html>
