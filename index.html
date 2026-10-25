@@ -82,6 +82,33 @@
   }
   .card p { margin-bottom: 14px; }
   .card p:last-child { margin-bottom: 0; }
+  .download {
+    text-align: center;
+    margin: 36px 0 8px;
+  }
+  .download a {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .download a:hover {
+    background: var(--gold);
+    color: var(--void);
+  }
+  .download .ver {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #8a7e9c;
+    letter-spacing: 0.05em;
+  }
   .note {
     margin-top: 28px;
     text-align: center;
@@ -117,6 +144,11 @@
     <p>
       The 2D demo validates the visual language and the underlying math. The intended 3D implementation places those same nodes and arcs in world space, projected through the camera, with engine-side line rendering, glow, and audio spatialization.
     </p>
+  </div>
+
+  <div class="download">
+    <a href="LightningDemo_r42.zip" download>Download Addon (r42)</a>
+    <span class="ver">Latest concept demo · Classic Era 11509</span>
   </div>
 
   <div class="note">
