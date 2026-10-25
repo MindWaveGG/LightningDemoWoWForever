@@ -1,0 +1,7 @@
+## Interface: 11509
+## Title: LightningDemo
+## Notes: Procedural lightning concept demo (Classic Era test for WoW Forever)
+## Version: 0.1-r42
+## Author: Mind Wave
+
+LightningDemo.lua
